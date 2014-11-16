@@ -8,30 +8,45 @@ p {
   line-height: 1.5;
   font-size: 1.1em;
   position: relative;
-
-  &:hover {
-    color: blue;
-  }
+  transition: all, .2s linear;
 }
 
 .buttons {
-  border-radius: 50%;
-  border: 1px solid gray;
-  background: rgba(gray, .2);
-  content: '';
-  height: 24px;
-  opacity: 1;
-  position: absolute;
-  right: -60px;
-  top: 0px;
-  width: 24px;
-
-  &:hover {
-    color: red;
-  }
+  width: 20px;
+  height: 50px;
+  background: red;
 }
 
 .flag {
+  &:after, &:before {
+    border-radius: 50%;
+    content: '';
+    display: inline-block;
+    font-size: .3em;
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    height: 26px;
+    width: 26px;
+  }
+
+  &:before {
+    content: url('../images/smile.svg');
+    background: rgba(green, .1);
+    color: green;
+    right: -30px;
+  }
+
+  &:after {
+    content: url('../images/frown.svg');
+    color: darkred;
+    background: rgba(red, .1);
+    right: -65px;
+  }
+}
+
+pre code {
+  display: block;
 }
 
 code {
