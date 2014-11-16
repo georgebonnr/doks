@@ -1,7 +1,6 @@
 $('p').hover(
   function () {
-    console.log ("you got it");
-    $(this).addClass('flag');
+    $(this).addClass('flag', 400, "easeOutBounce");
   },
 
   function () {
