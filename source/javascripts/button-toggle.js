@@ -1,9 +1,17 @@
 $('p').hover(
   function () {
-    $(this).addClass('flag', 400, "easeOutBounce");
+    $(this).addClass('flag');
+    $(this).click(
+      function() {
+        $('.box').show();
+      });
   },
 
   function () {
+    $(this).click(
+      function() {
+        $('.box').hide();
+      });
     $(this).removeClass('flag');
   }
 );
